@@ -14,6 +14,7 @@ body:
     attributes:
       label: "Experience Rating"
       description: "How has your experience been with PromptTest?"
+      default: 0
       options:
         - "⭐⭐⭐⭐⭐ (5/5) — Loving it!"
         - "⭐⭐⭐⭐ (4/5) — Great, but needs minor polish"
