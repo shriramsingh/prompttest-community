@@ -1,0 +1,49 @@
+name: "💡 Feature Request & Enhancement"
+description: "Suggest an improvement, new plain-English command syntax, or CLI option"
+title: "[Feature]: "
+labels: ["enhancement", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make PromptTest even faster, easier, or more capable? We'd love to hear it!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem or Use Case"
+      description: "Is your feature request related to a problem or a workflow limitation?"
+      placeholder: "e.g., Currently it's hard to test long-press or double-tap interactions on list items..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: "Proposed Solution or Syntax"
+      description: "Describe the proposed plain-English command syntax, CLI flag, or capability."
+      placeholder: "e.g., Support: `Double tap 'Item #1'` or `Long press 'Save' for 2s`"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: "Have you considered any alternative workarounds or solutions?"
+      placeholder: "e.g., I tried using custom wait delays or manual coordinate taps..."
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Feature Category"
+      description: "Which part of PromptTest would this benefit?"
+      options:
+        - "Plain-English DSL / Syntax"
+        - "Autonomous State-Graph Explorer (`explore`)"
+        - "Interactive Recorder (`record`)"
+        - "Visual Regression & Baselines"
+        - "Reports & CI/CD Integration"
+        - "Device Management / ADB"
+        - "VS Code Extension"
+        - "Other"

@@ -1,0 +1,91 @@
+name: "🐛 Bug Report"
+description: "Report an error, crash, or unexpected behavior in PromptTest"
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this issue! 
+        Before filing, please make sure your Android device/emulator has USB Debugging enabled and is visible via `adb devices`.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Bug Description"
+      description: "A clear and concise description of what the bug is."
+      placeholder: "e.g., PromptTest failed to detect the 'Sign In' button even though it was visible on screen..."
+    validations:
+      required: true
+
+  - type: input
+    id: command_run
+    attributes:
+      label: "Command Executed"
+      description: "The exact CLI command you ran in your terminal."
+      placeholder: "e.g., npx prompttest run specs/login.txt com.example.app --heal"
+    validations:
+      required: true
+
+  - type: textarea
+    id: spec_snippet
+    attributes:
+      label: "Prompt Spec Snippet (if applicable)"
+      description: "The relevant plain-English steps from your spec file."
+      render: text
+      placeholder: |
+        1. Type 'test@example.com' into 'Email'
+        2. Tap 'Sign In'
+        3. Verify 'Dashboard' is visible
+
+  - type: dropdown
+    id: framework
+    attributes:
+      label: "Target Mobile Framework"
+      description: "Which framework is your target Android app built with?"
+      options:
+        - "React Native (bare / CLI)"
+        - "Expo (Expo Go or EAS Build)"
+        - "Flutter"
+        - "Native Android (Jetpack Compose)"
+        - "Native Android (XML Views)"
+        - "Other / Unknown"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device_type
+    attributes:
+      label: "Device Environment"
+      description: "Are you testing on a physical phone or an emulator?"
+      options:
+        - "Physical Android Device (USB)"
+        - "Physical Android Device (Wi-Fi)"
+        - "Android Emulator (Android Studio / AVD)"
+        - "Cloud Device Farm / CI"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment Details"
+      description: "Please share your operating system, Node.js version, and device model."
+      placeholder: "e.g., Windows 11, Node v20.11.0, Pixel 7 (Android 14)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Terminal Logs / Error Trace"
+      description: "Copy and paste the terminal error log (including stack traces if any)."
+      render: shell
+      placeholder: "Paste console output here..."
+
+  - type: textarea
+    id: expected_vs_actual
+    attributes:
+      label: "Expected vs. Actual Behavior"
+      description: "What did you expect to happen, and what happened instead?"
+      placeholder: "Expected: Step 2 should tap 'Sign In' and proceed.\nActual: Timed out after 10s waiting for element."

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 Community Discussions & Questions"
+    url: "https://github.com/shriramsingh/prompttest-community/discussions"
+    about: "Ask questions, discuss mobile testing strategies, or get help with your test specs."
+  - name: "📦 NPM Package Page"
+    url: "https://www.npmjs.com/package/prompttest"
+    about: "View official releases, version history, and dependencies on npm."
+  - name: "🛡️ Report a Security Vulnerability"
+    url: "mailto:uic.17mca1009@gmail.com"
+    about: "Privately disclose sensitive security vulnerabilities to the author."
