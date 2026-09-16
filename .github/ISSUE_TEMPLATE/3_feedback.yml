@@ -1,0 +1,40 @@
+name: "💬 General Feedback & Praises"
+description: "Share your overall experience, compliments, or general thoughts on PromptTest"
+title: "[Feedback]: "
+labels: ["feedback", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share your feedback!
+        Your thoughts help guide our engineering roadmap and make PromptTest better for everyone.
+
+  - type: dropdown
+    id: rating
+    attributes:
+      label: "Experience Rating"
+      description: "How has your experience been with PromptTest?"
+      options:
+        - "⭐⭐⭐⭐⭐ (5/5) — Loving it!"
+        - "⭐⭐⭐⭐ (4/5) — Great, but needs minor polish"
+        - "⭐⭐⭐ (3/5) — Okay, encountered some friction"
+        - "⭐⭐ (2/5) — Frustrating / missing features"
+        - "⭐ (1/5) — Not working for me"
+    validations:
+      required: true
+
+  - type: textarea
+    id: message
+    attributes:
+      label: "Your Feedback or Thoughts"
+      description: "What did you like? What could be improved?"
+      placeholder: "e.g. PromptTest saved us hours on our mobile tests..."
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment (Optional)"
+      description: "Operating system, Node version, or mobile framework tested."
+      placeholder: "e.g., Windows 11, Node v24, Expo React Native"
