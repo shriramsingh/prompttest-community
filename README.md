@@ -22,6 +22,20 @@ This is the **public community hub** for PromptTest. While the core test engine 
 
 ---
 
+## 🖥️ PromptTest Studio
+
+PromptTest Studio is the official **visual desktop IDE & interactive mobile QA studio** for PromptTest — a live phone canvas, visual element inspector, click-to-prompt test generation, and real-time step streaming.
+
+The docs below are synced automatically from the private studio repository on every studio push:
+
+- [Studio overview (README)](studio/README.md)
+- [Architecture & technical design](studio/docs/ARCHITECTURE.md)
+- [Product specification](studio/docs/PRODUCT_SPEC.md)
+- [Roadmap & tasks](studio/docs/ROADMAP.md)
+- [Release notes](studio/docs/release-artifacts/RELEASE-NOTES.md)
+
+---
+
 ## 🚀 Quick Start with PromptTest
 
 Install PromptTest into your React Native, Expo, Flutter, or Native Android project:
