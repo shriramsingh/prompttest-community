@@ -22,13 +22,17 @@ This is the **public community hub** for PromptTest. While the core test engine 
 
 ---
 
-## 🖥️ PromptTest Studio
+## 🖥️ PromptTest Studio (Visual Desktop IDE)
 
-PromptTest Studio is the official **visual desktop IDE & interactive mobile QA studio** for PromptTest — a live phone canvas, visual element inspector, click-to-prompt test generation, and real-time step streaming.
+**[PromptTest Studio](https://shriramsingh.github.io/prompttest-studio-site/)** is the official visual desktop IDE and interactive mobile QA studio for PromptTest:
+- 📱 **Real-Time Device Mirroring**: Low-latency screen streaming with instant click, drag, and hardware navigation.
+- 🎯 **Visual Element Inspector**: Point and click to inspect native views with instant auto-generated plain-English assertions.
+- 📸 **Visual Regression & Exclude Masks**: Pixel-level baseline comparisons with draggable exclude masks for dynamic areas (clocks, battery, banners).
+- 🚀 **100% Local-First & Air-Gapped**: Runs entirely on your machine over local ADB with zero cloud dependencies.
 
-The studio README below is synced automatically from the private studio repository whenever it changes:
-
-- [Studio overview (README)](studio/README.md)
+👉 **[Download PromptTest Studio for Windows (v0.1.0)](https://shriramsingh.github.io/prompttest-studio-site/downloads.html)**  
+📖 **[Read the Studio Documentation & Guides](https://shriramsingh.github.io/prompttest-studio-site/studio.html)**  
+📄 **[Studio Technical Overview](studio/README.md)**
 
 ---
 
