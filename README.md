@@ -1,19 +1,23 @@
-# ⚡ PromptTest Community Hub & Issue Tracker
+# ⚡ PromptTest Mobile — Community Hub & Issue Tracker
 
-> **Ultra-fast, zero-code autonomous mobile testing & visual QA brain for Android.**  
-> The official public community tracker, Q&A forum, and feedback portal for PromptTest.
+> **Ultra-fast, zero-code autonomous mobile testing & visual QA brain for Android & iOS.**  
+> The official public community tracker, Q&A forum, and feedback portal for PromptTest Mobile.
 
-[![npm version](https://img.shields.io/npm/v/prompttest.svg?color=cb3837)](https://www.npmjs.com/package/prompttest)
-[![npm downloads](https://img.shields.io/npm/dm/prompttest.svg?color=blue)](https://www.npmjs.com/package/prompttest)
-[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](https://www.npmjs.com/package/prompttest)
+[![npm version](https://img.shields.io/npm/v/prompttest-mobile.svg?color=cb3837)](https://www.npmjs.com/package/prompttest-mobile)
+[![npm downloads](https://img.shields.io/npm/dm/prompttest-mobile.svg?color=blue)](https://www.npmjs.com/package/prompttest-mobile)
+[![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](https://www.npmjs.com/package/prompttest-mobile)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![Android ADB](https://img.shields.io/badge/Android-ADB%20Native-orange.svg)](https://developer.android.com/tools/adb)
+
+> [!NOTE]
+> **Looking for the Python LLM prompt evaluator?** That project is [`decodingchris/prompttest`](https://github.com/decodingchris/prompttest).  
+> **This is PromptTest Mobile** — the autonomous mobile application QA and visual regression testing engine for native Android & iOS mobile applications.
 
 ---
 
 ## 📌 About This Repository
 
-This is the **public community hub** for PromptTest. While the core test engine and state-graph algorithms are proprietary and maintained in a private repository, this repository provides:
+This is the **public community hub** for PromptTest Mobile. While the core test engine and state-graph algorithms are proprietary and maintained in a private repository, this repository provides:
 
 - 🐛 **Public Bug Tracker**: File bugs, crashes, or ADB compatibility issues.
 - 💡 **Feature Requests**: Propose new plain-English commands, CLI flags, or integrations.
@@ -24,7 +28,7 @@ This is the **public community hub** for PromptTest. While the core test engine 
 
 ## 🖥️ PromptTest Studio (Visual Desktop IDE)
 
-**[PromptTest Studio](https://shriramsingh.github.io/prompttest-studio-site/)** is the official visual desktop IDE and interactive mobile QA studio for PromptTest:
+**[PromptTest Studio](https://shriramsingh.github.io/prompttest-studio-site/)** is the official visual desktop IDE and interactive mobile QA studio for PromptTest Mobile:
 - 📱 **Real-Time Device Mirroring**: Low-latency screen streaming with instant click, drag, and hardware navigation.
 - 🎯 **Visual Element Inspector**: Point and click to inspect native views with instant auto-generated plain-English assertions.
 - 📸 **Visual Regression & Exclude Masks**: Pixel-level baseline comparisons with draggable exclude masks for dynamic areas (clocks, battery, banners).
@@ -36,16 +40,19 @@ This is the **public community hub** for PromptTest. While the core test engine 
 
 ---
 
-## 🚀 Quick Start with PromptTest
+## 🚀 Quick Start with PromptTest Mobile
 
-Install PromptTest into your React Native, Expo, Flutter, or Native Android project:
+Install PromptTest Mobile into your React Native, Expo, Flutter, or Native Android project:
 
 ```bash
-# Run instantly with npx:
-npx prompttest doctor
+# Run instantly with npx (recommended):
+npx prompttest-mobile doctor
 
 # Or install as a dev dependency:
-npm install --save-dev prompttest
+npm install --save-dev prompttest-mobile
+
+# (Legacy package alias also supported):
+# npx prompttest doctor
 ```
 
 ### 3 Core Workflows
