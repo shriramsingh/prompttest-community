@@ -67,8 +67,22 @@ npm install --save-dev prompttest-mobile
    ```
 3. **Run Plain-English Test Specification:**
    ```bash
-   npx prompttest run specs/login.txt com.yourcompany.app --heal
+   npx prompttest-mobile run specs/login.txt com.yourcompany.app --heal
    ```
+
+---
+
+## ⚡ PromptTest Mobile vs. Appium & Detox
+
+| Capability | Appium | Detox | ⚡ PromptTest Mobile |
+| :--- | :--- | :--- | :--- |
+| **Initial Setup Time** | 1–2 hours (Java, drivers, server) | 45 mins (Build config, pods) | **0 seconds (instant via npx)** |
+| **App Instrumentation** | Server daemon required | Test runner compiled into app | **Zero instrumentation (pure native)** |
+| **Test Script Language** | Java / Python / TS (XPath) | JavaScript (Matchers) | **Plain English natural language** |
+| **Dynamic Locators** | Fragile XPaths | Test IDs required | **Self-healing AI heuristics** |
+| **Visual Regression** | Third-party plugin | None built-in | **Built-in pixel diff + exclude masks** |
+| **Autonomous Crawling** | None (manual scripts only) | None | **Autonomous state-graph AI crawler** |
+| **Execution Architecture**| Heavy background server | Test binary embedded in app | **Direct ADB streams (ultra-fast)** |
 
 ---
 
