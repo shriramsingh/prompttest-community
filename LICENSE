@@ -1,0 +1,44 @@
+Business Source License 1.1
+
+Parameters
+
+Licensor:
+PromptTest (Shriram Singh)
+
+Licensed Work:
+PromptTest (including its command-line interface, autonomous state-graph exploration engine,
+heuristic gesture systems, programmatic SDK, and the PromptTest Mobile Visual Studio Code
+extension), in source code, binary, and bundled distribution forms.
+
+Additional Use Grant:
+You may use the Licensed Work free of charge for:
+1. Non-commercial, educational, academic, and open-source purposes.
+2. Personal and evaluation use.
+3. Internal software testing within organizations that have an annual gross revenue of less
+   than $100,000 USD (or equivalent) and fewer than 10 employees.
+
+Commercial License Requirement:
+Any use within organizations exceeding the revenue or employee threshold, any use by testing
+agencies providing commercial QA services to third-party clients, or any deployment into production
+commercial CI/CD pipelines requires a commercial license from the Licensor.
+
+Hosting & Managed Service Restriction:
+You may not provide the Licensed Work, whether modified or unmodified, as a hosted service,
+managed QA service, or cloud testing platform to third parties without prior written consent.
+
+Change Date:
+2030-09-14
+
+Change License:
+Apache License, Version 2.0
+
+Notice:
+For commercial licensing inquiries, enterprise agreements, or custom SLAs, contact:
+PromptTest (https://github.com/shriramsingh/prompttest-community)
+
+Scope Notice:
+This License applies solely to the Licensed Work identified above (the PromptTest
+command-line interface, SDK, associated engine, and the PromptTest Mobile Visual Studio
+Code extension). PromptTest Studio and any other PromptTest-branded products or services
+are separate products governed by their own license agreements and are NOT licensed
+under this License.
