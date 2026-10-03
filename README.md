@@ -104,10 +104,10 @@ To set clear expectations, here is PromptTest's current platform status:
 
 ### 1. Hardware Back Button Minimizing the App
 * **What happens**: Running `Press back` while on the app's root dashboard or home tab tells the Android OS to minimize or exit the app.
-* **How to solve it**:
-  - In specs, tap the in-app back icon/button (e.g. `Tap 'Back'` or `Tap '<'`) instead of the hardware key on top-level screens.
-  - In autonomous exploration (`explore`), PromptTest's built-in **Package Jail Guard** automatically detects if the app was backgrounded and restores it.
-  - Add the `--fresh` flag when running specs to cold-start your app cleanly before tests.
+* **How PromptTest solves it**:
+  - **Root Anchor Safe Harbor**: Starting in v1.5.3, PromptTest automatically indexes your app's root navigation hubs (bottom tabs, home screens). When a back action would cause the app to exit, PromptTest intercepts and suppresses the escape.
+  - **Package Jail Guard**: In autonomous exploration (`explore`), the built-in jail guard automatically detects if an app was backgrounded and restores foreground focus immediately.
+  - In your own specs, you can also use `Tap 'Back'` or add `--fresh` to guarantee a clean cold-start.
 
 ### 2. Android OS Permission Dialogs ("Allow Notifications / Location")
 * **What happens**: System dialogs belong to Android OS (`com.android.permissioncontroller`), not your app, and can appear unexpectedly on new installs.
