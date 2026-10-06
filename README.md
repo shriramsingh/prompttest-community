@@ -8,10 +8,22 @@
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL%201.1-blue.svg)](https://www.npmjs.com/package/prompttest-mobile)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![Android ADB](https://img.shields.io/badge/Android-ADB%20Native-orange.svg)](https://developer.android.com/tools/adb)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
+[![GitHub Release](https://img.shields.io/github/v/release/shriramsingh/promptTest?color=blue&label=release)](https://github.com/shriramsingh/promptTest/releases)
 
-> [!NOTE]
-> **Looking for the Python LLM prompt evaluator?** That project is [`decodingchris/prompttest`](https://github.com/decodingchris/prompttest).  
-> **This is PromptTest Mobile** — the autonomous mobile application QA and visual regression testing engine for native Android & iOS mobile applications.
+---
+
+### 📦 Official Distribution & Releases
+
+| Channel | Platform / Target | Download / Install Link |
+| :--- | :--- | :--- |
+| **NPM (Mobile Flagship)** | Cross-Platform (Node 18+) | `npm install -g prompttest-mobile` or `npx prompttest-mobile` |
+| **NPM (Core Engine)** | Cross-Platform (Node 18+) | `npm install -g prompttest` or `npx prompttest` |
+| **Windows Standalone (.exe)** | Windows x64 (Zero Node.js required) | 👉 **[Download prompttest-win-x64.exe](https://github.com/shriramsingh/promptTest/releases)** |
+| **Linux Standalone Binary** | Linux x64 (Zero Node.js required) | 👉 **[Download prompttest-linux-x64](https://github.com/shriramsingh/promptTest/releases)** |
+| **macOS Standalone Binary** | macOS ARM64 / Apple Silicon | 👉 **[Download prompttest-macos-arm64](https://github.com/shriramsingh/promptTest/releases)** |
+| **GitHub Releases Hub** | All Platforms + SHA256 Checksums | 👉 **[View All GitHub Releases](https://github.com/shriramsingh/promptTest/releases)** |
+| **PromptTest Studio (Desktop IDE)** | Windows Desktop GUI (macOS soon) | 👉 **[Download Studio Installer](https://shriramsingh.github.io/prompttest-studio-site/downloads.html)** |
 
 ---
 
@@ -55,19 +67,27 @@ npm install --save-dev prompttest-mobile
 # npx prompttest doctor
 ```
 
-### 3 Core Workflows
+### Core Workflows
 
 1. **Environment Diagnostic Check:**
    ```bash
-   npx prompttest doctor
+   npx prompttest-mobile doctor
    ```
-2. **Zero-Code Autonomous App Exploration (AI Crawl):**
+2. **Interactive Spec Scaffolding Wizard:**
    ```bash
-   npx prompttest explore com.yourcompany.app
+   npx prompttest-mobile wizard
    ```
-3. **Run Plain-English Test Specification:**
+3. **Zero-Code Autonomous App Exploration (State-Graph Crawl):**
    ```bash
-   npx prompttest-mobile run specs/login.txt com.yourcompany.app --heal
+   npx prompttest-mobile explore com.yourcompany.app --video
+   ```
+4. **Run Plain-English Test Specification (Android or iOS):**
+   ```bash
+   # Android:
+   npx prompttest-mobile run specs/login.txt com.yourcompany.app --fresh --heal
+
+   # iOS Simulator (macOS):
+   npx prompttest-mobile run specs/login.txt --serial=<SIMULATOR-UDID> --ios-app=build/MyApp.app --fresh
    ```
 
 ---
@@ -86,17 +106,34 @@ npm install --save-dev prompttest-mobile
 
 ---
 
-## 📱 Platform Support & Current Scope
+## 📱 Platform Support & Verification Matrix
 
-To set clear expectations, here is PromptTest's current platform status:
+To set clear expectations, here is PromptTest's platform verification matrix:
 
-| Platform / Framework | Current Status | Notes |
-| :--- | :---: | :--- |
-| **Android (Physical & Emulators)** | **✅ Production Ready** | Battle-tested on React Native, Expo, Flutter, and Native Android. |
-| **iOS / iPhone & iPad** | **🚧 In Active Development** | iOS execution engine is in development; not supported in v1.3.x. |
-| **Websites / Desktop Browsers** | **❌ Not Supported** | PromptTest is dedicated strictly to mobile apps. For web, use Playwright or Cypress. |
-| **Standard UI Hierarchy** | **✅ Full Support** | Reads all accessibility trees (`text`, `content-desc`, `resource-id`). |
-| **Custom Canvas / OpenGL Games** | **⚠️ Not Supported** | Games drawn directly on custom canvas/OpenGL lack native accessibility nodes. |
+| Platform | Target Type | Current Status | Notes & Capabilities |
+| :--- | :--- | :---: | :--- |
+| **Android** | Physical Devices (USB) | **✅ Production Ready** | Battle-tested on React Native, Expo, Flutter, and Native Android. |
+| **Android** | Wi-Fi Wireless ADB | **✅ Production Ready** | Zero-typing camera QR pairing (Android 11+), auto mDNS discovery, manual IP. |
+| **Android** | Android Emulators | **✅ Production Ready** | All features, headless CI execution, cold-starts. |
+| **Apple iOS** | **iOS Simulators** | **✅ Verified & Stable** | Supported via native `xcrun simctl` + local WebDriverAgent on macOS with Xcode 15+. Auto-installs `.app` bundles, captures unified logs, and retina screenshots. |
+| **Apple iOS** | **Physical iOS Hardware** | ⚠️ **Experimental** | Community-driven: requires manual Apple Developer code signing for WebDriverAgentRunner. Session recording is Android-only due to iOS sandboxing. |
+| **Websites** | Desktop Browsers | **❌ Not Supported** | PromptTest is dedicated strictly to mobile apps. For web, use Playwright or Cypress. |
+| **Accessibility Tree** | Standard UI Hierarchy | **✅ Full Support** | Reads all accessibility trees (`text`, `content-desc`, `resource-id`). |
+| **Canvas / Games** | Custom OpenGL / Canvas | **⚠️ Not Supported** | Games drawn directly on custom canvas/OpenGL lack native accessibility nodes. |
+
+---
+
+### 🚨 Top 5 Mobile QA Blockers & Instant Fixes
+
+Before diagnosing automation issues, check these 5 most frequent mobile QA hurdles:
+
+| # | Common Blocker | Root Cause | Instant Fix |
+|---|---|---|---|
+| **1** | **Xiaomi / MIUI / HyperOS ignores touch inputs** | Xiaomi restricts simulated input via ADB by default. | Open **Developer options** → Toggle ON **"USB debugging (Security settings)"** (Requires an active SIM card). |
+| **2** | **Target button not clickable because keyboard covers it** | Virtual IME keyboard obscures elements in lower half of screen. | PromptTest automatically dismisses soft keyboards during step taps. You can also explicitly add step: `Hide keyboard` or `Press back`. |
+| **3** | **Physical iOS device fails or cannot record touches** | iOS lacks ADB-style `getevent` raw touch capture; physical devices require Apple Code Signing. | **Use iOS Simulators for test execution** (fully verified). Touch recording is Android-only; write specs manually or scaffold via wizard on iOS. |
+| **4** | **`adb devices` shows device as `unauthorized` or `offline`** | RSA workstation key was not accepted on phone screen or USB cable is loose. | Re-plug USB cable. Unlock device and check **"Always allow from this computer"** on prompt. Run `prompttest doctor` to verify. |
+| **5** | **`EADDRINUSE: address already in use :::4040`** | Previous PromptTest live server or background process is still active. | Pass a custom port using `--serve 4041`, or run `prompttest doctor` / terminate zombie node instances on port 4040. |
 
 ---
 
