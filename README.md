@@ -9,21 +9,21 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![Android ADB](https://img.shields.io/badge/Android-ADB%20Native-orange.svg)](https://developer.android.com/tools/adb)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
-[![GitHub Release](https://img.shields.io/github/v/release/shriramsingh/promptTest?color=blue&label=release)](https://github.com/shriramsingh/promptTest/releases)
+[![GitHub Release](https://img.shields.io/github/v/release/shriramsingh/prompttest-community?color=blue&label=release)](https://github.com/shriramsingh/prompttest-community/releases)
 
 ---
 
 ### 📦 Official Distribution & Releases
 
-| Channel | Platform / Target | Download / Install Link |
-| :--- | :--- | :--- |
-| **NPM (Mobile Flagship)** | Cross-Platform (Node 18+) | `npm install -g prompttest-mobile` or `npx prompttest-mobile` |
-| **NPM (Core Engine)** | Cross-Platform (Node 18+) | `npm install -g prompttest` or `npx prompttest` |
-| **Windows Standalone (.exe)** | Windows x64 (Zero Node.js required) | 👉 **[Download prompttest-win-x64.exe](https://github.com/shriramsingh/promptTest/releases)** |
-| **Linux Standalone Binary** | Linux x64 (Zero Node.js required) | 👉 **[Download prompttest-linux-x64](https://github.com/shriramsingh/promptTest/releases)** |
-| **macOS Standalone Binary** | macOS ARM64 / Apple Silicon | 👉 **[Download prompttest-macos-arm64](https://github.com/shriramsingh/promptTest/releases)** |
-| **GitHub Releases Hub** | All Platforms + SHA256 Checksums | 👉 **[View All GitHub Releases](https://github.com/shriramsingh/promptTest/releases)** |
-| **PromptTest Studio (Desktop IDE)** | Windows Desktop GUI (macOS soon) | 👉 **[Download Studio Installer](https://shriramsingh.github.io/prompttest-studio-site/downloads.html)** |
+| Channel                             | Platform / Target                             | Download / Install Link                                                                                   |
+| :---------------------------------- | :-------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **NPM (Mobile Flagship)**           | Cross-Platform (Node 18+)                     | `npm install -g prompttest-mobile` or `npx prompttest-mobile`                                             |
+| **NPM (Core Engine)**               | Cross-Platform (Node 18+)                     | `npm install -g prompttest` or `npx prompttest`                                                           |
+| **Windows Turnkey Bundle & .exe**   | Windows x64 (Includes tested ADB, zero setup) | 👉 **[Get Latest Windows Release](https://github.com/shriramsingh/prompttest-community/releases/latest)** |
+| **macOS Turnkey Bundle & Binary**   | macOS Apple Silicon (Includes tested ADB)     | 👉 **[Get Latest macOS Release](https://github.com/shriramsingh/prompttest-community/releases/latest)**   |
+| **Linux Turnkey Bundle & Binary**   | Linux x64 (Includes tested ADB)               | 👉 **[Get Latest Linux Release](https://github.com/shriramsingh/prompttest-community/releases/latest)**   |
+| **GitHub Releases Hub**             | All Platforms + SHA256 Checksums               | 👉 **[Browse All Releases](https://github.com/shriramsingh/prompttest-community/releases)**               |
+| **PromptTest Studio (Desktop IDE)** | Windows Desktop GUI (macOS soon)              | 👉 **[Download Studio Installer](https://shriramsingh.github.io/prompttest-studio-site/downloads.html)**  |
 
 ---
 
