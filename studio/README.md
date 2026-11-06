@@ -11,6 +11,13 @@ PromptTest Studio provides a visual, interactive desktop environment for buildin
 - 📱 **Interactive Live Phone Canvas:** Direct ADB screen mirroring with interactive coordinate tapping and hover highlights.
 - 🎯 **Visual Element Inspector:** Hover over native Android buttons, inputs, and text to view resource IDs, bounds, and hierarchy attributes.
 - ✨ **Click-to-Prompt Test Generator:** Click any element on screen to automatically generate `Tap "..."`, `Type "..."`, or `Assert "..."` test steps.
+- 📍 **Pre-Flight Screen Alignment:** Automatically matches active device mirror screen with spec steps to provide 1-click execution from the active screen (`Run from Step X`).
+- ✍️ **Native Code Editor with Autocomplete:** Zero-latency editor featuring real-time syntax highlighting, line numbers, and intelligent auto-suggestions for UI elements, `If ... End` blocks, `Loop`, `Optional`, and `(continue on fail)`.
+- 🔍 **Searchable Spec Picker & Session Memory:** Instant substring filter across test specs with persistent active spec memory across reloads and app restarts.
+- ⌨️ **Global Command Palette (`Ctrl+K` / `Cmd+K`):** Keyboard-driven quick-open across test suites, environments, and quick studio actions.
+- 🔐 **Multi-Environment Profiles & Secrets Vault:** Switch between Dev, Staging, and Production profiles with encrypted parameter interpolation (`{{VAR}}`).
+- 📊 **Diagnostic Reports & 1-Click Bug Exporter:** Root-cause error triage, status filter chips (`All`, `Failures`, `Passed`, `Healed`), latency analytics, and 1-click Markdown bug export for Jira and Slack.
+- 📥 **Standalone HTML Report Generator:** 1-click prominent HTML export in both the live execution feed and historical reports dashboard.
 - ⏱️ **Real-Time Step Stream:** Live SSE connection streaming test step executions, durations, and pass/fail diagnostics.
 - 🕹️ **Virtual Android Navigation Bar:** Hardware Back, Home, and Recents buttons directly in the desktop interface.
 - 🔋 **Device Manager & Wake:** Auto-detects connected USB and Wi-Fi devices, with one-click wake & keyguard unlock.
